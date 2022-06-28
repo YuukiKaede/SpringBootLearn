@@ -17,6 +17,12 @@ public class SpringBootLearnApplication {
 //        takeFruit(new Plate<Food>(new Pear()));
         // 不可以使用Food进行构造，因为指定了T是Fruit，根据多态，不可以使用超类替代
 //        takeFruit(new Plate<Fruit>(new Food()));
+        // 多态的表现之一：可以使用父类（接口）指向子类，父类声明变量（引用变量）存放在方法栈中，其值（即指向的子类对象）则存放在堆中
+//        Person person = new Teacher("a", "b");
+        // 但不能用子类声明变量指向父类对象，这与泛型的逆变相似
+//        RedApple redApple = (RedApple) new Apple();
+//        System.out.println(person.getClass());
+//        System.out.println(redApple.getClass());
     }
 
     public static void test(Person person, Home home, Work work){
